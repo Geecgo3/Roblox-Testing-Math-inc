@@ -1,0 +1,53 @@
+local Workspace = game:GetService("Workspace")
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+
+local Plr = Players.LocalPlayer
+local Clipon = true -- Change this to false if you want noclip to be disabled by default
+local SteppedConnection
+
+-- Function to toggle noclip
+local function enableNoclip()
+    if Clipon then
+        print("Noclip enabled")
+        -- Connect to Stepped to disable collision for the player's parts
+        SteppedConnection = RunService.Stepped:Connect(function()
+            -- Loop through the player's character and disable collision
+            local character = Plr.Character
+            if character then
+                for _, part in pairs(character:GetChildren()) do
+                    if part:IsA("BasePart") then
+                        part.CanCollide = false
+                    end
+                end
+            end
+        end)
+    end
+end
+
+local function disableNoclip()
+    if SteppedConnection then
+        print("Noclip disabled")
+        -- Disconnect the Stepped connection to stop disabling collision
+        SteppedConnection:Disconnect()
+        SteppedConnection = nil
+    end
+    -- Restore collision for the player's parts
+    local character = Plr.Character
+    if character then
+        for _, part in pairs(character:GetChildren()) do
+            if part:IsA("BasePart") then
+                part.CanCollide = true
+            end
+        end
+    end
+end
+
+-- Enable noclip at the start
+enableNoclip()
+
+-- Disable noclip when the player respawns
+Plr.CharacterAdded:Connect(function()
+    disableNoclip() -- Disable noclip when the character is added
+    enableNoclip() -- Re-enable noclip after respawn
+end)
