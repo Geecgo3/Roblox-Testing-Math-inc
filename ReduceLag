@@ -1,7 +1,4 @@
-while true do
-    wait(90)  -- Wait for 10 seconds before running again
-    
-    local ToDisable = {
+local ToDisable = {
         Textures = true,
         VisualEffects = true,
         Parts = true,
@@ -80,4 +77,3 @@ while true do
         Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
         Lighting.Outlines = true
     end
-end
