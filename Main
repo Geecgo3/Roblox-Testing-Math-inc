@@ -1,0 +1,40 @@
+wait(0.5) -- loadstring Function | loadstring(game:HttpGet("https://raw.githubusercontent.com/Geecgo3/Roblox-Testing-Math-inc/refs/heads/main/Box-Esp_Eclipse"))()
+print("Loading Load ui") -- UI Coming soon Undoing the -- Will make it break do not mess with the code
+-- loadstring(game:HttpGet("https://raw.githubusercontent.com/Geecgo3/Roblox-Testing-Math-inc/refs/heads/main/UI"))()
+print("Game Detected [MM2]")
+-- Anti AFK
+print("Loading Anti-Afk")
+wait(1)
+loadstring(game:HttpGet("https://pastefy.app/FBuBPi9m/raw"))()
+wait(1)
+-- ESP CODE - DISABLED GO TO OUR DISCORD TO ENABLE IT!
+-- print("Loading Eclipse-Esp [BOX ESP]")
+-- loadstring(game:HttpGet("https://raw.githubusercontent.com/Geecgo3/Roblox-Testing-Math-inc/refs/heads/main/Box-Esp_Eclipse"))()
+--print("Loaded BoxEsp")
+--wait(1)
+--print("Loading Skeleton Esp")
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/Geecgo3/Roblox-Testing-Math-inc/refs/heads/main/Skele-Esp"))()
+--print("loaded Skeleton Esp")
+print("made by N!ck")
+wait(1)
+print("loading Noclip For Coinfarm")
+-- Noclip
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Geecgo3/Roblox-Testing-Math-inc/refs/heads/main/WithoutToggleE"))()
+--end
+wait(1)
+print("Loading Anti-Lag") -- anti lag is broken--
+-- loadstring(game:HttpGet("https://raw.githubusercontent.com/Geecgo3/Roblox-Testing-Math-inc/refs/heads/main/ReduceLag"))()
+-- wait(1)
+print("Loading Auto Coin")
+-- Coin Location [workspace.Map.CoinContainer.Coin_Server] -- Map = Map being used 
+-- Map Locations [workspace.ChristmasItaly] -- Ex
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vexroxd/My-Script-/refs/heads/main/MM2-Candy-Farm"))()
+
+-- Counter Wait [5.5 + 1] = 6.5
+print("loaded if nothing is happening please rejoin or switch executor.")
+
+print("Made by n!ck")
+
+print("your running version 1.0 [Classic]")
+
+print("Enjoy")
