@@ -1,5 +1,5 @@
 while true do
-    wait(10)  -- Wait for 10 seconds before running again
+    wait(90)  -- Wait for 10 seconds before running again
     
     local ToDisable = {
         Textures = true,
