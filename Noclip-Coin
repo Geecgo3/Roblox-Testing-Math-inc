@@ -1,0 +1,42 @@
+local Workspace = game:GetService("Workspace")
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+
+local Plr = Players.LocalPlayer
+local Clipon = false
+local SteppedConnection
+
+print("Noclip script loaded. Press 'E' to toggle.")
+
+-- Function to toggle noclip
+local function toggleNoclip()
+    Clipon = not Clipon
+    if Clipon then
+        print("Noclip enabled")
+        SteppedConnection = RunService.Stepped:Connect(function()
+            for _, child in pairs(Workspace:GetChildren()) do
+                if child.Name == Plr.Name then
+                    for _, part in pairs(child:GetChildren()) do
+                        if part:IsA("BasePart") then
+                            part.CanCollide = false
+                        end
+                    end
+                end
+            end
+        end)
+    else
+        print("Noclip disabled")
+        if SteppedConnection then
+            SteppedConnection:Disconnect()
+            SteppedConnection = nil
+        end
+    end
+end
+
+-- Listen for the 'E' key press
+local UIS = game:GetService("UserInputService")
+UIS.InputBegan:Connect(function(input, isProcessed)
+    if not isProcessed and input.KeyCode == Enum.KeyCode.E then
+        toggleNoclip()
+    end
+end)
